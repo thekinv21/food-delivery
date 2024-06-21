@@ -1,5 +1,5 @@
-import HomeScreen from '@/screens/home/HomeScreen'
+import WelcomeScreen from '@/screens/welcome/WelcomeScreen'
 
 export default function Index() {
-	return <HomeScreen />
+	return <WelcomeScreen />
 }
