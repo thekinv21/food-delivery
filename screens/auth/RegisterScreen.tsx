@@ -6,12 +6,26 @@ import { CustomText } from '@/components/ui/CustomText'
 
 import { useCustomNavigation } from '@/hooks/useCustomNavigation'
 
-export function LoginScreen() {
+export function RegisterScreen() {
 	const { navigation } = useCustomNavigation()
+
 	return (
 		<SafeAreaView className='relative h-screen w-full custom-flex-center'>
-			<View className='h-full w-full space-y-4 px-10 custom-flex-col'>
-				<Image source={require('@/assets/Logo.png')} className='mb-10' />
+			<View className='h-full w-full space-y-4 px-10 pt-10 custom-flex-col'>
+				<Image source={require('@/assets/Logo.png')} className='' />
+
+				<View className='w-full'>
+					<CustomField label='Name' placeholder='Enter name...' />
+				</View>
+
+				<View className='w-full'>
+					<CustomField label='Surname' placeholder='Enter surname...' />
+				</View>
+
+				<View className='w-full'>
+					<CustomField label='E-mail' placeholder='Enter e-mail...' />
+				</View>
+
 				<View className='w-full'>
 					<CustomField label='Username' placeholder='Enter username...' />
 				</View>
@@ -24,23 +38,15 @@ export function LoginScreen() {
 					/>
 				</View>
 
-				<View className='w-full custom-flex-end'>
-					<Pressable onPress={() => console.log('Forgot Password Pressed')}>
-						<CustomText
-							content='Forgot Password'
-							className='text-xs font-light capitalize text-gray-500'
-						/>
-					</Pressable>
-				</View>
-
 				<View className='w-full'>
 					<CustomButton
-						content='Login'
-						onPress={() => console.log('Login Pressed')}
+						content='Register'
+						className='my-3'
+						onPress={() => console.log('Register Pressed')}
 					/>
 				</View>
 
-				<View className='w-full flex-row py-6 custom-flex-center'>
+				<View className='w-full flex-row py-2 custom-flex-center'>
 					<View className='w-1/3 border border-gray-200' />
 
 					<View className='mx-6'>
@@ -53,16 +59,16 @@ export function LoginScreen() {
 				</View>
 
 				<CustomText
-					content={`Don't have an account?`}
+					content={`If you have an account?`}
 					className='text-sm font-light text-gray-500'
 				/>
 				<Pressable
 					onPress={() => {
-						navigation.navigate('register' as unknown as never)
+						navigation.navigate('login' as unknown as never)
 					}}
 				>
 					<CustomText
-						content='Register'
+						content='Sign In'
 						className='text-base font-light text-primary/80'
 					/>
 				</Pressable>
