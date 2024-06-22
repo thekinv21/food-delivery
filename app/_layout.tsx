@@ -1,14 +1,5 @@
-import { Stack } from 'expo-router'
+import AppRoutes from '@/routes/AppRoutes'
 
 export default function RootLayout() {
-	return (
-		<Stack
-			screenOptions={{
-				headerShown: false
-			}}
-		>
-			<Stack.Screen name='index' />
-			<Stack.Screen name='login' />
-		</Stack>
-	)
+	return <AppRoutes />
 }
