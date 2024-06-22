@@ -21,7 +21,7 @@ export function CustomField({ ...props }: ICustomField) {
 			)}
 			<TextInput
 				secureTextEntry={props.isSecure ? true : false}
-				className={`w-full rounded-md border border-gray-300 px-4 py-3 text-sm outline-none transition-all duration-500 ease-in-out focus:border-primary ${props.className}`}
+				className={`w-full rounded-md border border-gray-300 px-4 py-2.5 text-sm outline-none transition-all duration-500 ease-in-out focus:border-primary ${props.className}`}
 				placeholder={props.placeholder ? props.placeholder : 'Enter value'}
 			/>
 		</View>
